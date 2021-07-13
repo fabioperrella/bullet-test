@@ -126,6 +126,7 @@ GEM
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     uniform_notifier (1.14.2)
+    webrick (1.7.0)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -138,9 +139,7 @@ DEPENDENCIES
   bullet
   rails (~> 6.1.4)
   sqlite3 (~> 1.4)
-
-RUBY VERSION
-   ruby 2.7.3p183
+  webrick
 
 BUNDLED WITH
-   2.2.16
+   2.2.22
