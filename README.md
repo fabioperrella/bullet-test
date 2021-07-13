@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a project to test the [bullet gem](https://github.com/flyerhzm/bullet)
 
-Things you may want to cover:
+## Instructions
 
-* Ruby version
+Execute the following commands to prepare and run the application:
 
-* System dependencies
+```bash
+bundle install
+bundle exec rake db:migrate db:seed
+bundle exec rails s
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Then, open http://localhost:3000 in your browser
