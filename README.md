@@ -11,7 +11,9 @@ bundle install
 bundle exec rake db:migrate db:seed
 ```
 
-## To see how Bullet shows an error in the browser
+## Detecting N+1 queries
+
+### In the browser
 
 Start rails server:
 
@@ -23,7 +25,7 @@ Then, open http://localhost:3000 in your browser. An alert message will pop up w
 
 The error is also logged at `log/bullet.log`
 
-## To see how Bullet raises an error in tests
+### In tests
 
 Run the following test:
 
@@ -32,3 +34,19 @@ bundle exec rspec spec/requests/posts_controller_spec.rb
 ```
 
 The error is also logged at `log/bullet.log`
+
+### An example of controller test that Bullet can't detect N+1
+
+Run the following test:
+
+```bash
+bundle exec spec/controllers/posts_controller_spec.rb
+```
+
+### An example of view test that Bullet can't detect N+1
+
+Run the following test:
+
+```bash
+bundle exec spec/views/posts/index.html.erb_spec.rb
+```
