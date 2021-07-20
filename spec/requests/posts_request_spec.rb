@@ -11,4 +11,15 @@ RSpec.describe "Posts", type: :request do
       expect(response.status).to eq(200)
     end
   end
+
+  describe "GET /basic_index" do
+    it 'lists all posts' do
+      post1 = Post.create!
+      post2 = Post.create!
+
+      get '/posts/basic_index'
+
+      expect(response.status).to eq(200)
+    end
+  end
 end

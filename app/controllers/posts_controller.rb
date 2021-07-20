@@ -1,9 +1,11 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
-
   # GET /posts
   def index
     @posts = Post.all
+  end
+
+  def basic_index
+    @posts = Post.all.includes(:comments)
   end
 
   # GET /posts/1
