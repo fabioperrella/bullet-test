@@ -8,6 +8,10 @@ class PostsController < ApplicationController
     @posts = Post.all.includes(:comments)
   end
 
+  def index_with_counter
+    @posts = Post.all
+  end
+
   # GET /posts/1
   def show
   end

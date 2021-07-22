@@ -56,3 +56,13 @@ Run the following test:
 ```bash
 bundle exec rspec 'spec/views/posts/index.html.erb_spec.rb[1:1]'
 ```
+
+## Detecting Missing Counter Cache
+
+### In tests
+
+Run the following test:
+
+```bash
+bundle exec rspec 'spec/requests/posts_request_spec.rb[1:3]'
+```
